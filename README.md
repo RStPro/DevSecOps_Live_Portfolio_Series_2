@@ -145,3 +145,5 @@ MIT
 ## 🌟 Contributions
 
 Pull requests welcome. For major changes, please open an issue first to discuss.
+
+![CI](https://github.com/RStPro/DevSecOps_Live_Portfolio_Series_2/actions/workflows/ci.yml/badge.svg)

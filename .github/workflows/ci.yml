@@ -1,0 +1,34 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: [frontend, backend]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      working-directory: apps/${{ matrix.service }}
+      run: npm install
+
+    - name: Run Lint
+      working-directory: apps/${{ matrix.service }}
+      run: npm run lint
+
+    - name: Run Tests
+      working-directory: apps/${{ matrix.service }}
+      run: npm test
