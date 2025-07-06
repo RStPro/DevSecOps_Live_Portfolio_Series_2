@@ -1,11 +1,11 @@
 # LinkedIn Post – Series 2: Phase 1
 
-## DevSecOps Live Portfolio | Phase 1 – CI/CD Pipeline Setup  
+## DevSecOps Live Portfolio | Phase 1.1 – CI/CD Pipeline Setup  
 *Building Security In From the First Commit*
 
 ---
 
-**Phase 1 is complete!**  
+**Phase 1.1 is complete!**  
 We've established a lean and secure CI pipeline using GitHub Actions, Docker, and matrix builds.
 
 ### What Was Done:
