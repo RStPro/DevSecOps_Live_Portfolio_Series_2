@@ -1,0 +1,33 @@
+app = "devsecops-series2-backend"
+primary_region = "cdg"
+
+[build]
+dockerfile = "Dockerfile"
+
+[env]
+PORT = "4000"
+
+[[services]]
+  internal_port = 4000
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
+
+[[checks]]
+  type = "http"
+  name = "http-check"
+  interval = "15s"
+  timeout = "10s"
+  method = "get"
+  path = "/"
+  protocol = "http"
+  grace_period = "10s"
+  restart_limit = 0
+  port = 4000
+

@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express');  // <== REQUIRED
 const { ApolloServer } = require('apollo-server-express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -9,6 +9,7 @@ const typeDefs = `#graphql
     hello: String
   }
 `;
+
 const resolvers = {
   Query: {
     hello: () => 'Hello from GraphQL backend!',
@@ -24,8 +25,8 @@ async function startServer() {
   server.applyMiddleware({ app });
 
   const PORT = process.env.PORT || 4000;
-  app.listen(PORT, () => {
-    console.log(`🚀 Backend ready at http://localhost:${PORT}${server.graphqlPath}`);
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 Backend ready at http://0.0.0.0:${PORT}${server.graphqlPath}`);
   });
 }
 
