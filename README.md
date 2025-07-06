@@ -145,9 +145,3 @@ MIT
 ## 🌟 Contributions
 
 Pull requests welcome. For major changes, please open an issue first to discuss.
-
----
-
-## 🚜 Next Step
-
-Begin [Phase 0: Environment Setup & Bootstrap](./docs/phase0_setup.md)
