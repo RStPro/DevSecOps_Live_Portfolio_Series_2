@@ -21,13 +21,12 @@ PORT = "4000"
 
 [[checks]]
   type = "http"
-  name = "http-check"
+  name = "graphql-check"
   interval = "15s"
   timeout = "10s"
   method = "get"
-  path = "/"
+  path = "/graphql"
   protocol = "http"
   grace_period = "10s"
   restart_limit = 0
   port = 4000
-

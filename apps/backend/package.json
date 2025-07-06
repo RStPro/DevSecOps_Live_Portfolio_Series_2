@@ -8,6 +8,7 @@
     "build": "echo \"Backend build not needed\"",
     "lint": "echo \"No lint yet\" && exit 0"
   },
+  "build": "echo \"No build step for backend\"",
   "keywords": [],
   "author": "",
   "license": "ISC",
